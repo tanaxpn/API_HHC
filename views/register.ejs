@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<% include partials/header.ejs %>
+<body>
+<% include partials/navbar.ejs %>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h1>Register olo</h1>
+            <div class="form-group">
+                <img src="/public/img/MCH_icon.jpg">
+                <label for="fname">First Name</label>
+                <input type="text" class="form-control" name="fname" id="fname" aria-describedby="emailHelp" placeholder="Enter First Name">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" class="form-control" name="lname" id="lname" aria-describedby="emailHelp" placeholder="Enter Last Name">
+            </div>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown button
+                </button>
+                <div class="dropdown-menu profile-list" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </div>
+            <input type="button" style="width:100%;" class="btn btn-dark" id="btnSave" value="SAVE!!"/>
+
+        </div>
+    </div>
+    <div class="row">
+
+        <table class="table" id="profile_data">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Active</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script src="js/view.register.js"></script>
+</body>
+</html>

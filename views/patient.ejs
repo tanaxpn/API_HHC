@@ -1,0 +1,282 @@
+<% include partials/layout-header.ejs %>
+<div class="newPatientFormZone">
+    <h3>เพิ่มผู้ป่วย</h3>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newPaHomeId">บ้านเลขที่ <span style="color:red;"> *</span></label>
+                <input class="form-control" id="newPaHomeId" type="text" placeholder="บ้านเลขที่"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newPaName">ชื่อ <span style="color:red;"> *</span></label>
+                <input class="form-control" id="newPaName" type="text" placeholder="ชื่อ"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newPaLastName">นามสกุล <span style="color:red;"> *</span></label>
+                <input class="form-control" id="newPaLastName" type="text" placeholder="นามสกุล"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newPaGender">เพศ <span style="color:red;"> *</span></label>
+                <select name="PaGender" class="form-control" id="newPaGender"  placeholder="เพศ"/>
+                <option value="ชาย">ชาย</option>
+                <option value="หญิง">หญิง</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="newPaAge">ปีเกิด <span style="color:red;"> *</span></label>
+                <select name="Age" class="form-control" id="newPaAge" placeholder="ค.ศ"/>
+                <option value="21">2000</option>
+                <option value="22">1999</option>
+                <option value="23">1998</option>
+                <option value="24">1997</option>
+                <option value="25">1996</option>
+                <option value="26">1995</option>
+                <option value="27">1994</option>
+                <option value="28">1993</option>
+                <option value="29">1992</option>
+                <option value="30">1991</option>
+                <option value="31">1990</option>
+                <option value="32">1989</option>
+                <option value="33">1988</option>
+                <option value="34">1987</option>
+                <option value="35">1986</option>
+                <option value="36">1985</option>
+                <option value="37">1984</option>
+                </select>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newPaMarital">สถาานะสมรส <span style="color:red;"> *</span></label>
+                <select name="PaMarital" class="form-control" id="newPaMarital"  placeholder="เพศ"/>
+                <option value="1">โสด</option>
+                <option value="2">มีแฟนแล้ว</option>
+                <option value="3">เเต่งงานเเล้ว</option>
+                <option value="4">อย่าร้าง</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newPaReligion">ศาสนา <span style="color:red;"> *</span></label>
+                <select name="PaReligion" class="form-control" id="newPaReligion" placeholder="ศาสนา"/>
+                <option value="ศาสนาพุทธ">ศาสนาพุทธ</option>
+                <option value="ศาสนาอิสลาม">ศาสนาอิสลาม</option>
+                <option value="ศาสนาคริสต์">ศาสนาคริสต์</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newPaTreatment">ประชาชน <span style="color:red;"> *</span></label>
+                <input class="form-control" id="newPaTreatment" type="text"maxlength="13" placeholder="ประชาชน"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" id="saveNewPatient" style="width:48%" >บันทึก</button>
+                <button type="button" class="btn btn-danger" onclick="resetForm()" style="width:48%; margin-left: 2%;" >ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="editPatientFormZone">
+    <h3>แก้ไขข้อมูลผู้ป่วย</h3>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editPaHomeId">บ้านเลขที่ <span style="color:red;"> *</span></label>
+                <input class="form-control" id="editPaHomeId" type="text" placeholder="บ้านเลขที่"/>
+                <input  id="editPaId" type="hidden"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editPaName">ชื่อ <span style="color:red;"> *</span></label>
+                <input class="form-control" id="editPaName" type="text" placeholder="ชื่อ"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editPaLastName">นามสกุล <span style="color:red;"> *</span></label>
+                <input class="form-control" id="editPaLastName" type="text" placeholder="นามสกุล"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editPaGender">เพศ <span style="color:red;"> *</span></label>
+                <select name="Gender" class="form-control" id="editPaGender"  placeholder="เพศ"/>
+                <option value="ชาย">ชาย</option>
+                <option value="หญิง">หญิง</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="editPaAge">ปีเกิด <span style="color:red;"> *</span></label>
+                <select name="Age" class="form-control" id="editPaAge" placeholder="ปี"/>
+                <option value="21">2000</option>
+                <option value="22">1999</option>
+                <option value="23">1998</option>
+                <option value="24">1997</option>
+                <option value="25">1996</option>
+                <option value="26">1995</option>
+                <option value="27">1994</option>
+                <option value="28">1993</option>
+                <option value="29">1992</option>
+                <option value="30">1991</option>
+                <option value="31">1990</option>
+                <option value="32">1989</option>
+                <option value="33">1988</option>
+                <option value="34">1987</option>
+                <option value="35">1986</option>
+                <option value="36">1985</option>
+                <option value="37">1984</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editPaMarital">สถานะสมรส<span style="color:red;"> *</span></label>
+                <select name="Marital" class="form-control" id="editPaMarital"  placeholder="สถานะสมรส">
+                <option value="1">โสด</option>
+                <option value="2">มีแฟนแล้ว</option>
+                <option value="3">เเต่งงานเเล้ว</option>
+                <option value="4">อย่าร้าง</option>
+                </select>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editPaReligion">ศาสนา <span style="color:red;"> *</span></label>
+                <select name="Religion" class="form-control" id="editPaReligion" placeholder="ศาสนา">
+                    <option value="ศาสนาพุทธ">ศาสนาพุทธ</option>
+                    <option value="ศาสนาอิสลาม">ศาสนาอิสลาม</option>
+                    <option value="ศาสนาคริสต์">ศาสนาคริสต์</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editPaTreatment" >ประชาชน <span style="color:red;"> *</span></label>
+                <input class="form-control"  id="editPaTreatment" type="text"maxlength="13" placeholder="ประชาชน"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editPamodname" >โรคประจำตัว <span style="color:red;"> *</span></label>
+                <input disabled class="form-control"  id="editPamodname" type="text"maxlength="13" placeholder="โรคประจำตัว"/>
+            </div>
+        </div>
+    </div>   <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editParela" >ประวัติการรักษา <span style="color:red;"> *</span></label>
+                <input disabled class="form-control"  id="editParela" type="text"maxlength="13" placeholder="ประวัติการรักษา"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" id="saveEditPatient" style="width:48%" >บันทึก</button>
+                <button type="button" class="btn btn-danger" onclick="resetForm()" style="width:48%; margin-left: 2%;" >ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dataZone">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-4">
+                    <div class="input-group searchInput">
+                        <input id="keywordInput" class="form-control" type="text" placeholder="ค้นหาด้วย ชื่อ อีเมล" aria-describedby="search"/>
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" id="search"><span class="material-icons">search</span></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-12 text-right">
+                    <button type ="button" id="addNewPatient" class="btn btn-primary">เพิ่มผู้ป่วย</button>
+                    <button type ="button" id="addNewPatientIn" class="btn btn-primary">+</button>
+
+                </div>
+
+
+            </div>
+            <div class="row" style="margin-top:15px;">
+                <div class="col-12">
+                    <div class="box-body">
+                        <table id="table" class="table" data-order='[[ 0, "asc" ]]' data-page-length='10'>
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">บ้านเลขที่</th>
+                                <th scope="col">ชื่อ</th>
+                                <th scope="col">นามสกุล</th>
+                                <th scope="col">เพศ</th>
+                                <th scope="col">อายุ</th>
+                                <th scope="col">สถานะสมรส</th>
+                                <th scope="col">ศาสนา</th>
+                                <th scope="col">ประชาชน</th>
+                                <th scope="col">เเก้ไข</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="css/patient.css">
+<script src="js/view.patient.js"></script>
+<% include partials/layout_foot.ejs %>

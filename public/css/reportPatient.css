@@ -1,0 +1,10 @@
+.card-body{
+    border-bottom: 1px solid rgba(0,0,0,.125) !important;
+    padding: 30px !important;
+}
+.card-body label{
+    font-size: 16px;
+}
+.dataZone{
+    padding-bottom: 20px;
+}

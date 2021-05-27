@@ -1,0 +1,7 @@
+.newPatientFormZone , .editPatientFormZone {
+    left: -310px;
+    width: 310px;
+    position: absolute;
+    padding: 20px;
+    border: 1px solid silver;
+}

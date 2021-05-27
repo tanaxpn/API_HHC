@@ -1,0 +1,145 @@
+<% include partials/layout-header.ejs %>
+<div class="newUserFormZone">
+    <h3>เพิ่มผู้ใช้งานใหม่</h3>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newUsUserName">ชื่อผู้ใช้งาน <span style="color:red;"> *</span></label>
+                <input class="form-control" id="newUsUserName" type="text" placeholder="ชื่อผู้ใช้งาน"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newUsName">ชื่อ <span style="color:red;"> *</span></label>
+                <input class="form-control" id="newUsName" type="text" placeholder="ชื่อ"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newUsPass">รหัสผ่าน <span style="color:red;"> *</span></label>
+                <input class="form-control" id="newUsPass" type="text" placeholder="รหัสผ่าน"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newUsEmail">อีเมล <span style="color:red;"> *</span></label>
+                <input class="form-control" id="newUsEmail" type="text" placeholder="อีเมล"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newUsPhone">เบอร์โทรศัพท์ <span style="color:red;"> *</span></label>
+                <input class="form-control" id="newUsPhone" type="text" placeholder="เบอร์โทรศัพท์"/>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" id="saveNewUser" style="width:48%" >บันทึก</button>
+                <button type="button" class="btn btn-danger" onclick="resetForm()" style="width:48%; margin-left: 2%;" >ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="editUserFormZone">
+    <h3>แก้ไขข้อมูลผู้ใช้งาน</h3>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editUsUserName">ชื่อผู้ใช้งาน <span style="color:red;"> *</span></label>
+                <input class="form-control" id="editUsUserName" type="text" placeholder="ชื่อผู้ใช้งาน"/>
+                <input  id="editUsId" type="hidden"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editUsName">ชื่อ <span style="color:red;"> *</span></label>
+                <input class="form-control" id="editUsName" type="text" placeholder="ชื่อ"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editUsEmail">อีเมล <span style="color:red;"> *</span></label>
+                <input class="form-control" id="editUsEmail" type="text" placeholder="อีเมล"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editUsPhone">เบอร์โทรศัพท์ <span style="color:red;"> *</span></label>
+                <input class="form-control" id="editUsPhone" type="text" placeholder="เบอร์โทรศัพท์"/>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" id="saveEditUser" style="width:48%" >บันทึก</button>
+                <button type="button" class="btn btn-danger" onclick="resetForm()" style="width:48%; margin-left: 2%;" >ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dataZone">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-4">
+                    <div class="input-group searchInput">
+                        <input id="keywordInput" class="form-control" type="text" placeholder="ค้นหาด้วย ชื่อ อีเมล" aria-describedby="search"/>
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" id="search"><span class="material-icons">search</span></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-8 text-right">
+                    <button type ="button" id="addNewUser" class="btn btn-primary">เพิ่มผู้ใช้งาน</button>
+                </div>
+            </div>
+            <div class="row" style="margin-top:15px;">
+                <div class="col-12">
+                    <div class="box-body">
+                        <table id="table" class="table" data-order='[[ 0, "asc" ]]' data-page-length='10'>
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">ชื่อผู้ใช้</th>
+                                <th scope="col">ชื่อ</th>
+                                <th scope="col">รหัสผ่าน</th>
+                                <th scope="col">อีเมล</th>
+                                <th scope="col">เบอร์มือถือ</th>
+                                <th scope="col">สถานะ</th>
+                                <th scope="col">แก้ไข</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="css/user.css">
+<script src="js/view.user.js"></script>
+<% include partials/layout_foot.ejs %>

@@ -1,0 +1,19 @@
+img {
+    margin-right: 15px;
+}
+
+h5{
+    font-size: 40px;
+}
+
+label{
+    font-weight: bold;
+}
+
+.card {
+    margin: 5% 30% 10% 30%;
+}
+
+#btnSubmit {
+    width: 100%;
+}

@@ -1,0 +1,30 @@
+<div class="sidebar-sticky">
+    <ul class="nav flex-column">
+    <% for(var i = 0 ; i < menu.length ; i++) { %>
+        <% if(menu[i].type == 'main') {%>
+            <li class="nav-item main-menu">
+                <label>
+                    <%= menu[i].menu%>
+                </label>
+            </li>
+        <%} else { %>
+            <% if(menu[i].child_id != '' && menu[i].child_id != undefined) {%>
+                <div class="collapse <%= menu[i].child_id %>">
+                    <div class="card card-body">
+                        <a class="nav-link" href="<%= menu[i].path %>" <%= menu[i].attr%> >
+                            <i class="material-icons"><%= menu[i].icon %></i><span><%= menu[i].menu %></span>
+                        </a>
+                    </div>
+                </div>
+            <%} else { %>
+                <li class="nav-item menu-list">
+                    <a class="nav-link" href="<%= menu[i].path %>" <%= menu[i].attr%> >
+                        <i class="material-icons"><%= menu[i].icon %></i><span><%= menu[i].menu %></span>
+                    </a>
+                </li>
+            <%} %>
+        <%}%>
+    <% } %>
+
+    </ul>
+</div>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><%= title %></title>
+    <script src="lib/jquery-3.4.1.min.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
+    <script src="lib/toastr/toastr.min.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/toastr/toastr.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="lib/main-script.js"></script>
+
+    <script src="js/view.login.js"></script>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<div class="card">
+    <h1 class="card-header" style="text-align: center"><img src="img/HHC_icon.png" height="60" ><label>เข้าสู่ระบบ HHC</label></h1>
+    <div class="card-body">
+        <form>
+            <div class="form-group">
+                <label for="username">ชื่อผู้ใช้</label>
+                <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="ชื่อผู้ใช้">
+            </div>
+            <div class="form-group">
+                <label for="password">รหัสผ่าน</label>
+                <input type="password" class="form-control" id="password" placeholder="รหัสผ่าน">
+            </div>
+            <button type="button" class="btn btn-primary" id="btnSubmit" style="font-size: 20px;">เข้าสู่ระบบ</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

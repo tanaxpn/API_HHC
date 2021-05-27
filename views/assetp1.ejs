@@ -1,0 +1,261 @@
+<% include partials/layout-header.ejs %>
+<div class="newAssetp1FormZone">
+    <h3>เพิ่มผู้ป่วย</h3>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newassetpat_id">ไอดี,<span style="color:red;"> *</span></label>
+                <input class="form-control" id="newassetpat_id" type="text" placeholder="ไอดี"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newasset_date">วันที่-เดือน-พ.ศ. <span style="color:red;"> *</span></label>
+                <input class="form-control" id="newasset_date" type="text" placeholder="ันที่-เดือน-พ.ศ. "/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newasset_time">เวลา <span style="color:red;"> *</span></label>
+                <input name="PaGender" class="form-control" id="newasset_time"  placeholder="เวลา"/>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-7">
+            <div class="form-group">
+                <label for="newasset_body">ร่างกาย <span style="color:red;"> *</span></label>
+                <input name="Age" class="form-control" id="newasset_body" placeholder="ร่างกาย"/>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newasset_tem">อุณหภูมิร่างกาย <span style="color:red;"> *</span></label>
+                <input name="PaMarital" class="form-control" id="newasset_tem"  placeholder="อุณหภูมิร่างกาย"/>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newasset_hrate">อัตราการเต้นของหัวใจ <span style="color:red;"> *</span></label>
+                <input name="PaReligion" class="form-control" id="newasset_hrate" placeholder="อัตราการเต้นของหัวใจ"/>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newasset_regular">ปกติ <span style="color:red;"> *</span></label>
+                <input class="form-control" id="newasset_regular" type="text"maxlength="13" placeholder="ปกติ"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="newasset_irregular">ไม่ปกติ <span style="color:red;"> *</span></label>
+                <input class="form-control" id="newasset_irregular" type="text" placeholder="ไม่ปกติ"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" id="saveNewassetp1" style="width:48%" >บันทึก</button>
+                <button type="button" class="btn btn-danger" onclick="resetForm()" style="width:48%; margin-left: 2%;" >ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="editAssetp1FormZone">
+    <h3>แก้ไขข้อมูลผู้ป่วย</h3>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editassetpat_id">ไอดี <span style="color:red;"> *</span></label>
+                <input class="form-control" id="editassetpat_id" type="text" placeholder="ไอดี"/>
+                <input  id="editasset_id" type="hidden"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editasset_date">วันเดือนปี <span style="color:red;"> *</span></label>
+                <input class="form-control" id="editasset_date" type="text" placeholder="วันเดือนปี"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editasset_time">เวลา <span style="color:red;"> *</span></label>
+                <input name="Gender" class="form-control" id="editasset_time"  placeholder="เวลา"/>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="form-group">
+                <label for="editasset_body">ร่างกาย <span style="color:red;"> *</span></label>
+                <input name="Age" class="form-control" id="editasset_body" placeholder="ร่างกาย"/>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editasset_tem">อุณหภูมิร่างกาย<span style="color:red;"> *</span></label>
+                <input name="Marital" class="form-control" id="editasset_tem"  placeholder="อุณหภูมิร่างกาย">
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editasset_hrate">อัตราการเต้นของหัวใจ <span style="color:red;"> *</span></label>
+                <input name="Religion" class="form-control" id="editasset_hrate" placeholder="อัตราการเต้นของหัวใจ">
+                </input>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editasset_regular" >ปกติ <span style="color:red;"> *</span></label>
+                <input class="form-control"  id="editasset_regular" type="text"maxlength="13" placeholder="ปกติ"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editasset_irregular">ผิดปกติ <span style="color:red;"> *</span></label>
+                <input class="form-control" id="editasset_irregular" type="text" placeholder="ผิดปกติ"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editasset_breathe">การหายใจ <span style="color:red;"> *</span></label>
+                <input class="form-control" id="editasset_breathe" type="text" placeholder="การหายใจ"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editasset_normal">ปกติ <span style="color:red;"> *</span></label>
+                <input class="form-control" id="editasset_normal" type="text" placeholder="ปกติ"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editasset_gasp">ไอ <span style="color:red;"> *</span></label>
+                <input class="form-control" id="editasset_gasp" type="text" placeholder="ไอ"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editasset_dry">ไอเเห้ง <span style="color:red;"> *</span></label>
+                <input class="form-control" id="editasset_dry" type="text" placeholder="ไอเเห้ง"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editasset_wet">ไอมีเสมหะ <span style="color:red;"> *</span></label>
+                <input class="form-control" id="editasset_wet" type="text" placeholder="ไอมีเสมหะ"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="editasset_bmi">MBI <span style="color:red;"> *</span></label>
+                <input class="form-control" id="editasset_bmi" type="text" placeholder="MBI"/>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" id="saveEditassetp1" style="width:48%" >บันทึก</button>
+                <button type="button" class="btn btn-danger" onclick="resetForm()" style="width:48%; margin-left: 2%;" >ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dataZone">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-4">
+                    <div class="input-group searchInput">
+                        <input id="keywordInput" class="form-control" type="text" placeholder="ค้นหา" aria-describedby="search"/>
+                        <div class="input-group-prepend">
+                            <div class="input-group-text" id="search"><span class="material-icons">search</span></div>
+                        </div>
+                    </div>
+
+                </div>
+<!--                <div class="col-12 text-right">-->
+<!--                    <button type ="button" id="addNewassetp1" class="btn btn-primary">เพิ่มผู้ป่วย</button>-->
+<!--                    <button type ="button" id="addNewassetp1In" class="btn btn-primary">+</button>-->
+<!--                </div>-->
+
+
+            </div>
+            <div class="row" style="margin-top:15px;">
+                <div class="col-12">
+                    <div class="box-body">
+                        <table id="table" class="table" data-order='[[ 0, "asc" ]]' data-page-length='10'>
+                            <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">ไอดี</th>
+                                <th scope="col">วัน-เดือน-ปี</th>
+                                <th scope="col">เวลา</th>
+                                <th scope="col">ร่างกาย</th>
+                                <th scope="col">อุณหภูมิร่างกาย</th>
+                                <th scope="col">อัตราการเต้นของหัวใจ</th>
+                                <th scope="col">ปกติ</th>
+                                <th scope="col">ไม่ปกติ</th>
+                                <th scope="col">เเก้ไข/ดู</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="css/assetp1.css">
+<script src="js/view.assetp1.js"></script>
+<% include partials/layout_foot.ejs %>

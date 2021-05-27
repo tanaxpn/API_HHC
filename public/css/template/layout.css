@@ -1,0 +1,135 @@
+/*https://www.schemecolor.com/pastle-2.php*/
+body{
+    overflow: hidden;
+    padding-right: 0px;
+}
+.main{
+    background-color: #fbfbfb;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+/*.container{*/
+/*    margin-left: 5px !important;*/
+/*}*/
+.layout-navbar{
+    height: 50px;
+    background-color: #80BEAF;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.layout-sidebar{
+    background-color: #2b3f3a;
+    width: 17%;
+    height: 50px;
+    position: relative;
+    min-height: 100%;
+    float: left;
+}
+.layout-content{
+    position: relative;
+    float: left;
+    width: 83%;
+    height: 100%;
+    padding: 10px;
+    overflow: auto;
+    bottom: 0px;
+}
+.content-page{
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.content-page .header{
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+}
+.sidebar-sticky {
+    width: 100%;
+}
+.navbar{
+    width: 100%;
+    padding: 0px !important;
+}
+.main-menu{
+    background-color: #21302c;
+    padding: .5rem 1rem;
+}
+.main-menu label{
+    font-size: 12px;
+    color: #4b646f;
+
+}
+.menu-list:hover{
+    background: #1a2623;
+}
+.menu-list .active {
+    border-left: 3px solid #F5B994;
+    background-color: #1a2623;
+    color: white;
+}
+.menu-list .active i{
+    margin-left: -3px;
+}
+.menu-list a{
+    color: #b8c7ce;
+}
+.menu-list a:hover{
+    color: white;
+}
+.navbar-brand{
+    color:#fff !important;
+}
+.nav-link span{
+    position: relative;
+    top: -5px;
+    left: 5px;
+}
+.nav-right .profile{
+    color: #fff !important;
+    font-weight: 400;
+    font-size: 20px;
+    top: -3px;
+    position: relative;
+    cursor: pointer;
+}
+.nav-right .profile:hover{
+    color: #222d32 !important;
+}
+.nav-right .power{
+    top: 3px;
+    position: relative;
+    color: #fff !important;
+    cursor: pointer;
+    margin-left: 10px;
+}
+.nav-right .power:hover{
+    color: #222d32 !important;
+}
+.card-body{
+    padding: 0 !important;
+    background-color: transparent;
+    border: none;
+    border-bottom: #4b646f 1px solid !important;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.card-body a{
+    color: #b8c7ce !important;
+}
+[data-toggle="collapse"]{
+
+}
+
+.card .active {
+    border-left: 3px solid #F5B994;
+    background-color: #1a2623;
+    color: white;
+}

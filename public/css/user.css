@@ -1,0 +1,7 @@
+.newUserFormZone , .editUserFormZone{
+    left: -310px;
+    width: 310px;
+    position: absolute;
+    padding: 15px;
+    border: 1px solid silver;
+}
